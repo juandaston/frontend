@@ -1,0 +1,61 @@
+<form name="advanceForm" class="css-form" novalidate>
+    <!-- MENSAJES -->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="control-label">Motivo de la consulta</label>
+                    <input type="text" class="form-control" ng-model="motivoConsulta" name="motivoConsulta" />
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="control-label">Enfermedad Actual</label>
+                    <input type="text" class="form-control" ng-model="enfermedadActual" name="enfermedadActual" />
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="control-label">Revisión por sistemas</label>
+                    <input type="text" class="form-control" ng-model="revisionPorSistemas" name="revisionPorSistemas" />
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="control-label">Diagnostico</label>
+                    <input type="text" class="form-control" ng-model="diagnostico" name="diagnostico" />
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="control-label">Conducta</label>
+                    <input type="text" class="form-control" ng-model="conducta" name="conducta" />
+                </div>
+            </div>
+        </div>
+        </br>
+        </br>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <tabla-antedentes></tabla-antedentes>
+                </div>
+            </div>
+        </div>
+
+        </br>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <tabla-examen-fisico></tabla-examen-fisico>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

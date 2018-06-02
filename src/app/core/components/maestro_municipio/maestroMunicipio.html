@@ -1,0 +1,11 @@
+<input type="text" class="form-control" ng-model="form" placeholder="Municipio" 
+uib-typeahead="item as item.nombre for item in getListaMunicipios($viewValue)" ng-blur="validar()"
+typeahead-loading="loadingDataMunicipio" typeahead-no-results="noResultsMunicipio" autocomplete="off" autocomplete="off"  name="{{name}}" ng-required="isRequired" advance-validations>
+	<div ng-show="loadingDataMunicipio">
+		<i class="glyphicon glyphicon-refresh"></i> cargando...
+	</div>
+</input>
+
+
+
+<!--TODO usar un ng-model particular para cada input de esta directiva-->

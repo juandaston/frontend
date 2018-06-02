@@ -1,0 +1,19 @@
+<!-- MENSAJES -->
+<div class="row">
+	<div class="col-sm-12">
+		<span ng-if="vm.mensajes">
+      <div ng-repeat="mensaje in vm.mensajes">
+        <div ng-if="mensaje.visible" class="alert alert-dismissible" role="alert" 
+          ng-class="{'alert-danger': mensaje.tipo==='error',
+          'alert-success': mensaje.tipo==='success',
+          'alert-info': mensaje.tipo==='info',
+          'alert-warning': mensaje.tipo==='warning'}">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="mensaje.visible=false">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>{{mensaje.contenido}}</strong>
+        </div>
+      </div>
+		</span>
+	</div>
+</div>

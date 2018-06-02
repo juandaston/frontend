@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-sm-4">
+		<input type="text" name="cie10_id" class="form-control" ng-model="form" placeholder="Código" 
+		uib-typeahead="item as item.id for item in getListaCodigosCIE10($viewValue)" ng-blur="validar()"
+		typeahead-loading="loadingDataCodigo" typeahead-no-results="noResults">
+			<div ng-show="loadingDataCodigo">
+				<i class="glyphicon glyphicon-refresh"></i> cargando...
+			</div>
+		</input>
+	</div>
+
+	<div class="col-sm-8">
+		<input type="text" name="cie10_nombre" class="form-control" ng-model="form" placeholder="Descripción" 
+		uib-typeahead="item as item.nombre for item in getListaNombresCIE10($viewValue)" ng-blur="validar()"
+		typeahead-loading="loadingDataNombre" typeahead-no-results="noResults" autocomplete="off" advance-validations>
+			<div ng-show="loadingDataNombre">
+				<i class="glyphicon glyphicon-refresh"></i> cargando...
+			</div>
+		</input>
+	</div>
+</div>
+
+<!--TODO usar un ng-model particular para cada input de esta directiva-->

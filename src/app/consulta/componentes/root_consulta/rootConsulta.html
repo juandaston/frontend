@@ -1,0 +1,220 @@
+<form name="advanceForm" class="css-form" novalidate>
+    <!-- MENSAJES -->
+    <div class="jumbotron">
+        <advance-spinner ng-if="vm.cargando"></advance-spinner>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="tipoIdentificacion" class="control-label required">Tipo Id</label>
+                    <select class="form-control" ng-model="vm.datosPaciente.tipoIdentificacion" id="tipoIdentificacion" required advance-validations>
+                        <option value="">Seleccione</option>
+                        <option value="CC">Cedula</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label">Numero Identificación</label>
+                    <input type="text" class="form-control" ng-model="vm.datosPaciente.numeroIdentificacion" name="numeroIdentificacion" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-primary" ng-click="vm.consultarPacientePorId()">Consultar Paciente
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-show="vm.visible">
+            <div class="panel-heading">Datos paciente</div>
+            <div class="panel-body">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Primer nombre</label>
+                        <input disabled="true" type="text" class="form-control" ng-model="vm.paciente.primerNombre" name="primerNombre" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Segundo nombre</label>
+                        <input disabled="true" type="text" class="form-control" ng-model="vm.paciente.segundoNombre"  name="segundoNombre" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Primer apellido</label>
+                        <input disabled="true" type="text" class="form-control" ng-model="vm.paciente.primerApellido" name="primerApellido" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Segundo apellido</label>
+                        <input disabled="true" type="text" class="form-control" ng-model="vm.paciente.segundoApellido" name="segundoApellido" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-show="vm.visible">
+            <div class="panel-heading">Datos de la consulta</div>
+            <div class="panel-body">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Motivo de la consulta</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.motivoConsulta" name="motivoConsulta" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Enfermedad Actual</label>
+                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.enfermedadActual" name="enfermedadActual" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Revisión por sistemas</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.revisionPorSistemas" name="revisionPorSistemas" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Diagnostico</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.diagnostico" name="diagnostico" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Conducta</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.conducta" name="conducta" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-show="vm.visible">
+            <div class="panel-heading">Examen Fisico</div>
+            <div class="panel-body">
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Presion arterial</label>
+                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.presionArterial" name="presionArterial" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">FC</label>
+                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.fc" name="fc" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">FR</label>
+                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.fr" name="fr" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Peso</label>
+                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.peso" name="peso" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Talla</label>
+                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.talla" name="talla" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Perimetro Abdominal</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.perimetroAbdominal" name="perimetroAbdominal" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Cabeza</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.cabeza" name="cabeza" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Cuello</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.cuello" name="cuello" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Torax</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.torax" name="torax" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Abdomen</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.abdomen" name="abdomen" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Extremidades</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.extremidades" name="extremidades" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Neurologico</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.neurologico" name="neurologico" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Osteomuscular</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.osteomuscular" name="osteomuscular" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Mental</label>
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.mental" name="mental" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-show="vm.visible">
+            <div class="panel-heading">Antecedentes</div>
+            <div class="panel-body">
+                <tabla-antedentes idPac="vm.paciente.idPaciente"></tabla-antedentes>
+            </div>
+        </div>
+
+        <div class="row" ng-show="vm.visible">
+            <div class="col-lg-12">
+                <div class="pull-rigth">
+                    <button type="submit" class="btn btn-lg btn-primary" ng-click="vm.finalizarConsultaComando()">Finalizar consulta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>

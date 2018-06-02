@@ -1,0 +1,24 @@
+<div class="login">
+  <div class="contLog">
+    <div class="contForm">
+      <div>
+        <div><img src="assets/images/login_icon_flecha.png" width="40" height="40" alt="Icono"/></div>
+
+      </div>
+      <div>
+        <form name="advanceForm" role="form" novalidate>
+          <h2 class="form-signin-heading">BIENVENIDO</h2>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Usuario" required autofocus ng-model="form.username">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Contraseña" required ng-model="form.password">
+          </div>
+          <div class="form-group pull-right">
+            <button class="btn btn-primary" type="submit" ng-click="login()">Ingresar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

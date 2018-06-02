@@ -1,0 +1,10 @@
+[{
+	"codigo": "FAVORABLE",
+	"descripcion": "Favorable"
+}, {
+	"codigo": "DESFAVORABLE",
+	"descripcion": "Desfavorable"
+}, {
+	"codigo": "INCONSISTENTE",
+	"descripcion": "Inconsistente"
+}]

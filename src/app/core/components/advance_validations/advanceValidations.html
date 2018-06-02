@@ -1,0 +1,14 @@
+<span class="messages" ng-if="advanceForm.$submitted || advanceForm[name].$touched">
+  <div ng-messages="advanceForm[name].$error">
+    <div ng-message="required">Este campo es requerido.</div>
+    <div ng-message="number">Este campo debe ser numérico</div>
+    <div ng-message="date">Este campo debe ser una fecha válida (dd/mm/aaaa)</div>
+    <div ng-message="min">Este campo recibe valor minimo 0.</div>
+    <div ng-message="minlength">El dato ingresado es muy corto.</div>
+    <div ng-message="maxlength">El dato ingresado es muy largo.</div>
+    <div ng-message="pattern">El dato ingresado no es valido.</div>
+    <div ng-message="email">Este campo es de tipo correo electronico.</div>
+  </div>
+</span>
+<!--<pre>name: {{name | json}}</pre>-->
+<!--<pre>error: {{advanceForm[name].$error | json}}</pre>-->

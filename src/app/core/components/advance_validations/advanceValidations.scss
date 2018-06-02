@@ -1,0 +1,26 @@
+  .messages {
+    color: #FA787E;
+  }
+  
+  form.ng-submitted input.ng-invalid{
+    border-color: #FA787E;
+  }
+  
+  form input.ng-invalid.ng-touched {
+    border-color: #FA787E;
+  }
+  
+  form.ng-submitted select.ng-invalid{
+    border-color: #FA787E;
+  }
+  
+  form select.ng-invalid.ng-touched {
+    border-color: #FA787E;
+  }
+  
+  
+ form.ng-submitted .radio.ng-invalid{
+    border-color: #FA787E;
+  }
+  
+  

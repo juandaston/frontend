@@ -1,0 +1,98 @@
+/*responsive*/
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 930px) {
+}
+
+@media only screen and (max-width: 830px) {
+/*login*/
+.login .logTop{
+	margin:3% 0 0 0;
+	}
+
+.login .logTop .left{
+	width:100%;
+	}
+
+.login .logTop .right{
+	width:100%;
+	}
+
+.login .logoLogin{
+	margin:10px 0;
+	text-align:center;
+	}
+
+.login .fotoLog img {
+	width:auto;
+	height:100%;
+	}
+
+.login .contForm{
+	background:#FFFFFF;
+	padding:25px 30px 10px 30px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+/*menu*/
+.navbar-header .right{
+	width:100%;
+	float:left;
+	}
+.navbar-header .right .date .ayu{
+	margin:0 7px 0 0;
+	}
+.navbar-header .right .usu .name{
+	font-size:12px;
+	}
+.navbar-header .right .usu .cerrarS a{
+	font-size:11px;
+	}
+.navbar-header .right .date .ingre{
+	font-size:9px;
+	}
+.navbar-header .right .date .ayu a{
+	font-size:9px;
+	}
+/*footer*/
+footer .caja .right{
+	width:40%;
+	font-size:12px;
+	}
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 480px) {
+
+/*menu*/
+.navbar-header .logo:before{
+	display:none;
+	}
+.navbar-header .logoApp{
+	display:none;
+	}
+/*footer*/
+footer .caja .right{
+	width:70%;
+	}
+}
+@media only screen and (max-width: 340px) {
+/*menu*/
+.navbar-header .right .usu .name{
+	font-size:9px;
+	}
+/*login*/
+.login .logoLogin img{
+	width:100%;
+	height:auto;
+	max-width:320px;
+	}
+
+}

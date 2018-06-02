@@ -1,0 +1,43 @@
+[
+	{
+		"codigo": "01",
+		"descripcion": "Homicidio"
+	},
+	{
+		"codigo": "02",
+		"descripcion": "Suicidio"
+	},
+	{
+		"codigo": "03",
+		"descripcion": "Accidente en Moto"
+	},
+	{
+		"codigo": "04",
+		"descripcion": "Otros de Tránsito"
+	},
+	{
+		"codigo": "05",
+		"descripcion": "Accidente en el Hogar"
+	},
+	{
+		"codigo": "06",
+		"descripcion": "Catástrofes Naturales"
+	},
+	{
+		"codigo": "07",
+		"descripcion": "Otros Accidentes"
+	}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+

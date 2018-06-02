@@ -1,0 +1,33 @@
+[
+	{
+		"code":"1",
+		"name":"No Informado"
+	},{
+		"code":"2",
+		"name":"Preescolar"
+	},{
+		"code":"3",
+		"name":"Basica Primaria"
+	},{
+		"code":"4",
+		"name":"Secundaria"
+	},{
+		"code":"5",
+		"name":"Media Tecnica"
+	},{
+		"code":"6",
+		"name":"Normalista"
+	},{
+		"code":"7",
+		"name":"Superior y Postgrado"
+	},{
+		"code":"8",
+		"name":"Superior - Pregrado"
+	},{
+		"code":"9",
+		"name":"Superior - Maestria"
+	},{
+		"code":"10",
+		"name":"Superior - Doctorado"
+	}
+]

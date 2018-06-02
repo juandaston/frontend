@@ -1,0 +1,34 @@
+<div class="tit">Tabla de antecedentes</div>
+
+<div class="cont table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Fecha creación</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in vm.listaAntecedentes">
+            <td>{{ item.fechaCreacion }}</td>
+            <td>{{ item.tipo }}</td>
+            <td>{{ item.descripcion }}</td>
+            <td>
+                <a href="" >ginecologicos</a>
+            </td>
+            <td>
+                <a href="" >editar</a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="text-right" ng-show="vm.listaAntecedentes.length !== 0">
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.currentPage" max-size="5"
+                        boundary-links="true" force-ellipses="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                        boundary-link-numbers="true" rotate="false">
+        </uib-pagination>
+    </div>
+
+</div>

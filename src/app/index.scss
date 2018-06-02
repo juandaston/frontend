@@ -1,0 +1,11 @@
+// Bootstrap variables personalizadas
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// Importa todos los .scss de nuestras dependencias en bower, como bootstrap-saas.
+// bower:scss
+// endbower
+
+// gulp-inject importa todos los .scss de nuestro proyecto.
+// injector
+// endinjector

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+  <div class="container">
+      <a class="navbar-brand" href="layout">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbar" class="navbar-collapse collapse show">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="layout.consulta">Consulta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="layout.paciente">Paciente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="layout.historiaclinica">Historia Clinica</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" ng-click="cerrarSesion()" class="nav-link">Cerrar sesión</a>
+            </li>
+        </ul>
+
+      <h4>Bienvenido&nbsp;</h4>
+      <h1>{{ username }}</h1>
+      </div><!-- /.nav-collapse -->
+  </div>
+</nav><!-- /.navbar -->

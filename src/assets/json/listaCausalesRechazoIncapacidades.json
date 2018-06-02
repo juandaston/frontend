@@ -1,0 +1,26 @@
+[
+	{
+		"codigo": "Incapacidad no transcrita",
+		"descripcion": "Incapacidad no transcrita"
+	},
+	{
+		"codigo": "Origen Laboral",
+		"descripcion": "Origen Laboral"
+	},
+	{
+		"codigo": "Patología diferente",
+		"descripcion": "Patología diferente"
+	},
+	{
+		"codigo": "Incapacidad ingresada erróneamente, el período ya se pagó",
+		"descripcion": "Incapacidad ingresada erróneamente, el período ya se pagó"
+	},
+	{
+		"codigo": "Incapacidad ingresada erróneamente, interrupción superior a 30 días",
+		"descripcion": "Incapacidad ingresada erróneamente, interrupción superior a 30 días"
+	},
+	{
+		"codigo": "Tutela revocada",
+		"descripcion": "Tutela revocada"
+	}
+]

@@ -1,0 +1,53 @@
+<div class="tit">Tabla de examen fisico</div>
+
+<div class="cont table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Presion Arterial</th>
+            <th>FC</th>
+            <th>FR</th>
+            <th>Peso</th>
+            <th>Talla</th>
+            <th>Perimetro Abdominal</th>
+            <th>Cabeza</th>
+            <th>Cuello</th>
+            <th>Torax</th>
+            <th>Abdomen</th>
+            <th>Extremidades</th>
+            <th>Neurologico</th>
+            <th>Osteomuscular</th>
+            <th>Mental</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in vm.listaExamenFisico">
+            <td>{{ item.presionArterial }}</td>
+            <td>{{ item.fc }}</td>
+            <td>{{ item.fr }}</td>
+            <td>{{ item.peso }}</td>
+            <td>{{ item.talla }}</td>
+            <td>{{ item.perimetroAbdominal }}</td>
+            <td>{{ item.cabeza }}</td>
+            <td>{{ item.cuello }}</td>
+            <td>{{ item.torax }}</td>
+            <td>{{ item.abdomen }}</td>
+            <td>{{ item.extremidades }}</td>
+            <td>{{ item.neurologico }}</td>
+            <td>{{ item.osteomuscular }}</td>
+            <td>{{ item.mental }}</td>
+            <td>
+                <a href="" >editar</a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="text-right" ng-show="vm.listaExamenFisico.length !== 0">
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.currentPage" max-size="5"
+                        boundary-links="true" force-ellipses="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                        boundary-link-numbers="true" rotate="false">
+        </uib-pagination>
+    </div>
+
+</div>

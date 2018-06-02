@@ -1,0 +1,126 @@
+[{
+  "codigoAsobancaria": "0012",
+  "nombre": "BANCO SUDAMERIS",
+  "length": {
+    "A": [11, 12],
+    "C": [9, 12]
+  }
+}, {
+  "codigoAsobancaria": "066",
+  "nombre": "BANCO COOPERATIVO COOPCENTRAL"
+}, {
+  "codigoAsobancaria": "007",
+  "nombre": "BANCOLOMBIA",
+  "length": {
+    "A": 11,
+    "C": 11
+  }
+}, {
+  "codigoAsobancaria": "060",
+  "nombre": "BANCO PICHINCHA"
+}, {
+  "codigoAsobancaria": "0011",
+  "nombre": "BANCO AGRARIO",
+  "length": {
+    "A": 12,
+    "C": 12
+  }
+}, {
+  "codigoAsobancaria": "0014",
+  "nombre": "HELM BANK",
+  "length": {
+    "A": 9,
+    "C": 9
+  }
+}, {
+  "codigoAsobancaria": "0019",
+  "nombre": "BANCO COLPATRIA",
+  "length": {
+    "A": 10,
+    "C": 10
+  }
+}, {
+  "codigoAsobancaria": "013",
+  "nombre": "BBVA COLOMBIA",
+  "length": {
+    "A": 9,
+    "C": 9
+  }
+}, {
+  "codigoAsobancaria": "0001",
+  "nombre": "BANCO DE BOGOTA",
+  "length": {
+    "A": 9,
+    "C": 9
+  }
+}, {
+  "codigoAsobancaria": "0051",
+  "nombre": "DAVIVIENDA",
+  "length": {
+    "A": 12,
+    "C": 12
+  }
+}, {
+  "codigoAsobancaria": "0023",
+  "nombre": "BANCO DE OCCIDE",
+  "length": {
+    "A": 9,
+    "C": 9
+  }
+}, {
+  "codigoAsobancaria": "002",
+  "nombre": "BANCO POPULAR",
+  "length": {
+    "A": [9, 12],
+    "C": [9, 12]
+  }
+}, {
+  "codigoAsobancaria": "1289",
+  "nombre": "COTRAFA"
+}, {
+  "codigoAsobancaria": "1810",
+  "nombre": "BANCOOMEVA"
+}, {
+  "codigoAsobancaria": "062",
+  "nombre": "BANCO FALABELLA"
+}, {
+  "codigoAsobancaria": "1283",
+  "nombre": "COOPFCIERAANTIO"
+}, {
+  "codigoAsobancaria": "0032",
+  "nombre": "CAJA SOCIAL",
+  "length": {
+    "A": [11, 13],
+    "C": 11
+  }
+}, {
+  "codigoAsobancaria": "0052",
+  "nombre": "AV VILLAS",
+  "length": {
+    "A": 9,
+    "C": 9
+  }
+}, {
+  "codigoAsobancaria": "0063",
+  "nombre": "BANCO FINANDINA"
+}, {
+  "codigoAsobancaria": "1058",
+  "nombre": "BCO PROCREDIT"
+}, {
+  "codigoAsobancaria": "0009",
+  "nombre": "CITI BANK",
+  "length": {
+    "A": 10,
+    "C": 10
+  }
+}, {
+  "codigoAsobancaria": "1292",
+  "nombre": "BANCO CONFIAR"
+}, {
+  "codigoAsobancaria": "006",
+  "nombre": "BANCO CORPBANCA COLOMBIA S.A",
+  "length": {
+    "A": 9,
+    "C": 9
+  }
+}]

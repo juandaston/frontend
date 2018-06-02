@@ -1,0 +1,26 @@
+[
+	{
+		"codigo": "0",
+		"descripcion": "No está en Protección"
+	},{
+	
+		"codigo": "ACT",
+		"descripcion": "Activo"
+	},{
+	
+		"codigo": "STR",
+		"descripcion": "Solicitud de Traslado"
+	},{
+	
+		"codigo": "TRS",
+		"descripcion": "Trasladado"
+	},{
+	
+		"codigo": "PEN",
+		"descripcion": "Pensionado"
+	},{
+	
+		"codigo": "INA",
+		"descripcion": "Inactivo"
+	}
+]

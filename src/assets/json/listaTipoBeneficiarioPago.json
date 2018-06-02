@@ -1,0 +1,12 @@
+[
+	{
+		"codigo": "AFILIADO",
+		"descripcion": "Afiliado"
+	},{
+		"codigo": "EMPLEADOR",
+		"descripcion": "Empleador"
+	},{
+		"codigo": "TERCERO",
+		"descripcion": "Tercero"
+	}
+]

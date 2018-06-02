@@ -1,0 +1,137 @@
+<div class="modal-header">
+    <h3 class="modal-title">Agregar Paciente</h3>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="cont">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="tipoIdentificacion" class="control-label required">Tipo Id</label>
+                        <select class="form-control" ng-model="tipoIdentificacion" id="tipoIdentificacion" required advance-validations>
+                            <option value="">Seleccione</option>
+                            <option value="CC">Cedula</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Numero Identificación</label>
+                        <input type="text" class="form-control" ng-model="numeroIdentificacion" name="numeroIdentificacion" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Dirección</label>
+                        <input type="text" class="form-control" ng-model="direccion" name="direccion" advance-validations/>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Telefono</label>
+                        <input type="text" class="form-control" model="telefono" name="telefono"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Primer nombre</label>
+                        <input type="text" class="form-control" ng-model="primerNombre" name="primerNombre" required advance-validations/>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Segundo nombre</label>
+                        <input type="text" class="form-control" ng-model="segundoNombre"  name="segundoNombre" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Primer apellido</label>
+                        <input type="text" class="form-control" ng-model="primerApellido" name="primerApellido" required
+                               advance-validations/>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Segundo apellido</label>
+                        <input type="text" class="form-control" ng-model="segundoApellido" name="segundoApellido" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Estado civil</label>
+                        <select class="form-control" ng-model="estadoCivil" id="estadoCivil" name="estadoCivil" >
+                            <option value="">Seleccione</option>
+                            <option value="S">Soltero</option>
+                            <option value="C">Casado</option>
+                            <option value="U">Union Libre</option>
+                            <option value="O">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label" ng-class="{'required':vm.telefonoRequired}">Número de teléfono</label>
+                        <input type="text" class="form-control" ng-model="telefono" name="telefono"
+                               advance-validations/>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Profesión</label>
+                        <input type="text" class="form-control" ng-model="profesion" name="profesion" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label">Fecha de nacimiento</label>
+                        <advance-datepicker model="fechaNacimiento" name="fechaNacimiento" required="true"></advance-datepicker>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label" ng-class="{'required':vm.telefonoRequired}">Número celular</label>
+                        <input type="text" class="form-control" ng-model="celular" name="numeroCelular"
+                               advance-validations/>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label required">Género</label>
+                        <div class="custom-radio">
+                            <label>
+                                <input type="radio" ng-model="genero" value="M" name="genero"  required> Masculino
+                            </label>
+                            &nbsp;|&nbsp;
+                            <label>
+                                <input type="radio" ng-model="vm.model.genero" value="F" name="genero"  required> Femenino
+                            </label>
+                        </div>
+                        <advance-validations name="genero" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Observaciones</label>
+                        <input type="text" class="form-control" ng-model="observaciones" name="observaciones" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-secondary" type="button" ng-click="close()">Cancelar</button>
+    <button class="btn btn-primary" type="button" ng-click="aceptar()">Agregar</button>
+</div>

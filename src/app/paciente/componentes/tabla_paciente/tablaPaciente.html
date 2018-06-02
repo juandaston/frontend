@@ -1,0 +1,47 @@
+<div class="tit">Tabla de pacientes</div>
+<advance-spinner ng-if="vm.cargando"></advance-spinner>
+<div class="cont table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha Nacimiento</th>
+            <th>Tipo Identificación</th>
+            <th>N° Identificación</th>
+            <th>Sexo</th>
+            <th>Estado Civil</th>
+            <th>Celular</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in vm.listaPacientes">
+            <td>{{ item.idPaciente }}</td>
+            <td>{{ item.primerNombre + " " + item.segundoNombre }}</td>
+            <td>{{ item.primerApellido + " " + item.segundoApellido }}</td>
+            <td>{{ item.fechaNacimiento | date:'dd/MM/yyyy' }}</td>
+            <td>{{ item.tipoIdentificacion }}</td>
+            <td>{{ item.numeroIdentificacion }}</td>
+            <td>{{ item.sexo == 'M' ? 'Masculino' : 'Femenino' }}</td>
+            <td>{{ item.estadoCivil == 'S' ? 'Soltero' : item.estadoCivil == 'C' ? 'Casado' : item.estadoCivil == 'U' ? 'Union Libre' : 'Otro'}}</td>
+            <td>{{ item.celular }}</td>
+            <td>
+                <a href="" ng-click="vm.openEditarPaciente(item)">editar</a>
+            </td>
+        </tr>
+        <tr ng-show="vm.listaPacientes.length === 0">
+            <td class="text-center" colspan="8"> No hay registros para mostrar.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="text-right" ng-show="vm.listaPacientes.length !== 0">
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.currentPage" max-size="5"
+                        boundary-links="true" force-ellipses="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                        boundary-link-numbers="true" rotate="false">
+        </uib-pagination>
+    </div>
+
+</div>

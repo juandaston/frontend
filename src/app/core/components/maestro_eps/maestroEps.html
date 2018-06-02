@@ -1,0 +1,9 @@
+<input type="text" class="form-control" ng-model="form" placeholder="EPS" 
+uib-typeahead="item as item.nombre for item in getListaEPS($viewValue)" ng-blur="validar()"
+typeahead-loading="loadingDataEPS" typeahead-no-results="noResultsEPS" autocomplete="off" name="{{name}}" ng-required="isRequired" advance-validations>
+	<div ng-show="loadingDataEPS">
+  		<i class="glyphicon glyphicon-refresh"></i> cargando...
+	</div>
+</input>
+
+<!--TODO usar un ng-model particular para cada input de esta directiva-->

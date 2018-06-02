@@ -1,0 +1,13 @@
+[{
+	"codigo": "COTIZANTE",
+	"descripcion": "Cotizante"
+}, {
+	"codigo": "BENEFICIARIO",
+	"descripcion": "Beneficiario"
+}, {
+	"codigo": "SUBSIDIADO_SISBEN",
+	"descripcion": "Subsidiado - Sisben"
+}, {
+	"codigo": "SIN_COBERTURA_EN_SALUD",
+	"descripcion": "Sin cobertura en Salud"
+}]

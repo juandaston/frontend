@@ -1,0 +1,22 @@
+[
+	{
+		"code": "1",
+		"name": "Casado(a)"
+	},{
+	
+		"code": "2",
+		"name": "Separado(a)"
+	},{
+	
+		"code": "3",
+		"name": "Soltero(a)"
+	},{
+	
+		"code": "4",
+		"name": "Unión libre"
+	},{
+	
+		"code": "5",
+		"name": "Viudo(a)"
+	}
+]

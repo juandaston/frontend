@@ -1,0 +1,67 @@
+[
+	{
+		"codigo": "CC",
+		"descripcion": "Cédula de ciudadanía",
+		"tipo": "N"
+	},
+	{
+		"codigo": "NIT",
+		"descripcion": "Nit",
+		"tipo": "J"
+	},
+	{
+		"codigo": "CD",
+		"descripcion": "Carné diplomático",
+		"tipo": "N"
+	},
+	{
+		"codigo": "CE",
+		"descripcion": "Cédula de extranjería",
+		"tipo": "N"
+	},
+	{
+		"codigo": "FI",
+		"descripcion": "Fideicomiso",
+		"tipo": "J"
+	},
+	{
+		"codigo": "MSI",
+		"descripcion": "Menor sin identificación",
+		"tipo": "N"
+	},
+	{
+		"codigo": "NUIP",
+		"descripcion": "Número único de identificación",
+		"tipo": "N"
+	},
+	{
+		"codigo": "PAS",
+		"descripcion": "Pasaporte",
+		"tipo": "N"
+	},
+	{
+		"codigo": "RCN",
+		"descripcion": "Registro Civil",
+		"tipo": "N"
+	},
+	{
+		"codigo": "RM",
+		"descripcion": "Registro mercantil",
+		"tipo": "J"
+	},
+	{
+		"codigo": "SE",
+		"descripcion": "Sociedad extranjera sin NIT en Colombia",
+		"tipo": "J"
+	},
+	{
+		"codigo": "ASI",
+		"descripcion": "Adulto sin identificación",
+		"tipo": "N"
+	},
+	{
+		"codigo": "TI",
+		"descripcion": "Tarjeta de Identidad",
+		"tipo": "N"
+	}
+]

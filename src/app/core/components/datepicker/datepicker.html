@@ -1,0 +1,7 @@
+<div class="input-group">
+	<input type="text" class="form-control" ng-click="vm.open($event)" ng-model="vm.model" uib-datepicker-popup="dd/MM/yyyy" close-text="Close"
+	is-open="vm.status.opened"
+	name="{{vm.name}}" min-date="vm.minDate" max-date="vm.maxDate" ng-required="vm.required" ng-disabled="vm.disabled"/>
+
+</div>
+<advance-validations name="{{vm.name}}"/>

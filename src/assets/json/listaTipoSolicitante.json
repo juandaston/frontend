@@ -1,0 +1,14 @@
+[
+	{
+		"codigo": "AFILIADO",
+		"descripcion": "Afiliado"
+	},
+	{
+		"codigo": "APODERADO",
+		"descripcion": "Apoderado"
+	},
+	{
+		"codigo": "REPRESENTANTE LEGAL",
+		"descripcion": "Representante Legal"
+	}
+]
