@@ -37,8 +37,6 @@ export default angular.module('consultorio.core', ['ngAnimate', 'ngSanitize', 'n
   .filter('abs', AbsFilter)
   .factory('sessionInterceptor', SessionInterceptor)
   .provider("CryptoProvider", CryptoKeyProvider)
-  .service('assetsService', AssetsService)
-  .service('cachesService', CachesService)
   .service('utils', AdvUtils)
   .service('advanceApi', AdvanceApi)
   .service('authorization', AuthorizationService)
