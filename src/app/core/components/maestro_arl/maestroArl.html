@@ -1,7 +1,0 @@
-<input type="text" class="form-control" ng-model="vm.model" placeholder="ARL" uib-typeahead="item as item.nombre for item in vm.getListaARL($viewValue)"
-typeahead-loading="loadingDataARL" typeahead-no-results="noResultsARL" autocomplete="off" name="{{vm.name}}" ng-required="vm.required" advance-validations/>
-<i ng-show="loadingDataARL" class="glyphicon glyphicon-refresh"></i>
-<div ng-show="noResultsARL">
-	<i class="glyphicon glyphicon-remove"></i> No Results Found
-</div>
-<!--<pre>{{vm.name}}</pre>-->
