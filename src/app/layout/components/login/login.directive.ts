@@ -20,7 +20,7 @@ export function LoginController($scope, $base64, $state, toastr, authentication,
   angular.extend($scope, { form: form });
 
   $scope.login = function () {
-    if($scope.advanceForm.$valid){
+    if($scope.consultorioForm.$valid){
         var username = form.username;
         var consultorioToken  = $base64.encode(form.username+":"+form.password);
         sessionService.crearSesion( username, consultorioToken);
