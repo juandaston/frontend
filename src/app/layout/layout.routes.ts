@@ -4,7 +4,7 @@ export function routes($stateProvider: angular.ui.IStateProvider,
   $stateProvider
     .state('layout', {
       url: '/',
-      template: '<login></login>'
+      template: '<consultorio-root></consultorio-root>'
     })
     .state('login', {
       url: '/login',

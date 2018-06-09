@@ -8,6 +8,6 @@ import { LoginDirective } from "./components/login/login.directive";
 export default angular.module('consultorio.layout', [])
   .config(routes)
   .directive('login', LoginDirective)
-  .directive('advanceRoot', RootDirective)
-  .directive('advanceNavbar', NavbarDirective)
-  .directive('advanceSidebar', SidebarDirective);
+  .directive('consultorioRoot', RootDirective)
+  .directive('consultorioNavbar', NavbarDirective)
+  .directive('consultorioSidebar', SidebarDirective);

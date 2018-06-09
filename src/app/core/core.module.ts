@@ -29,7 +29,7 @@ declare var moment: moment.MomentStatic;
 export default angular.module('consultorio.core', ['ngAnimate', 'ngSanitize', 'ngMessages', 'ui.router', 'ui.bootstrap', 'toastr', 'multipleSelect', 'base64',
   'ngXlsx', 'ngFileSaver', 'angular.filter', 'ngCookies', 'yaru22.jsonHuman', 'angular-storage', 'ngPromiseExtras', 'ngIdle'])
   .constant("advanceEnviroment", {
-    "url": "http://181.140.132.200:9000/api",
+    "url": "http://localhost/api",
     "urlAuth": "http://localhost/autorizacion",
     "urlBPM": "http://localhost/bpm",
     "timeout": "15000",
