@@ -21,18 +21,16 @@ export function LoginController($scope, $base64, $state, toastr, authentication,
 
   $scope.login = function () {
     if($scope.advanceForm.$valid){
-      var menu = ''
-        var location = 'layout.concepto'
         var username = form.username;
-        var advanceToken  = $base64.encode(form.username+":"+form.password);
-        sessionService.crearSesion( username, advanceToken, menu, location);
+        var consultorioToken  = $base64.encode(form.username+":"+form.password);
+        sessionService.crearSesion( username, consultorioToken);
 
       authentication.login( form.username, form.password).then(function (response) {
         switch(response.status){
           case 200:
             var username = form.username;
-            var advanceToken  = $base64.encode(form.username+":"+form.password);
-            sessionService.crearSesion( username, advanceToken, response.data["menu"], response.data["ubicaciones"]);
+            var consultorioToken  = $base64.encode(form.username+":"+form.password);
+            sessionService.crearSesion( username, consultorioToken);
             var numSesionesAbiertas = response.data["sesiones-abiertas"];
             if(numSesionesAbiertas != '1'){
               toastr.info("Usted tiene " + numSesionesAbiertas + " sesiones abiertas simultáneamente.");

@@ -31,11 +31,7 @@ export function NavbarController($scope, $state, sessionService, authentication,
   }
 
   $scope.cerrarSesion = function () {
-    authentication.logout().then(function (response) {
       sessionService.cerrarSesion();
       $state.go("login");
-    }, function (reason) {
-      toastr.error("Ocurrió un error cerrando sesión");
-    });
   };
 }

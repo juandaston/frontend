@@ -55,11 +55,7 @@ export function RootController($scope, sessionService, utils, $timeout, toastr, 
   })
 
   $scope.cerrarSesion = function () {
-    authentication.logout().then(function (response) {
       sessionService.cerrarSesion();
       $state.go("login");
-    }, function (reason) {
-      toastr.error("Ocurrió un error cerrando sesión");
-    });
   };
 }

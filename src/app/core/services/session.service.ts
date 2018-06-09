@@ -11,19 +11,15 @@ export class SessionService {
     this.cripto = CryptoProvider;
   }
 
-  public crearSesion(username: string, advanceToken: string, menu: any, locations: any){
+  public crearSesion(username: string, consultorioToken: string){
     this.store.set('username', username);
-    this.store.set('advanceToken', this.cripto.encrypt(advanceToken));
-    this.store.set('menu', menu);
-    this.store.set('locations', locations);
+    this.store.set('consultorioToken', this.cripto.encrypt(consultorioToken));
   }
 
   public cerrarSesion(){
     this.store.remove('username');
-    this.store.remove('advanceToken');
-    this.store.remove('locations');
+    this.store.remove('consultorioToken');
     this.store.remove('current');
-    this.store.remove('menu');
   }
 
   public isAuthenticated() {
