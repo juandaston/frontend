@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="panel panel-default" ng-show="vm.visible">
+        <div class="panel panel-default" ng-if="vm.visible">
             <div class="panel-heading">Datos paciente</div>
             <div class="panel-body">
                 <div class="col-sm-3">
@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <div class="panel panel-default" ng-show="vm.visible">
+        <div class="panel panel-default" ng-if="vm.visible">
             <div class="panel-heading">Datos de la consulta</div>
             <div class="panel-body">
                 <div class="col-sm-3">
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <div class="panel panel-default" ng-show="vm.visible">
+        <div class="panel panel-default" ng-if="vm.visible">
             <div class="panel-heading">Examen Fisico</div>
             <div class="panel-body">
 
@@ -201,14 +201,14 @@
             </div>
         </div>
 
-        <div class="panel panel-default" ng-show="vm.visible">
+        <div ng-if="vm.visible" class="panel panel-default">
             <div class="panel-heading">Antecedentes</div>
             <div class="panel-body">
-                <tabla-antedentes idPac="vm.paciente.idPaciente"></tabla-antedentes>
+                <tabla-antecedentes idpac="1"></tabla-antecedentes>
             </div>
         </div>
 
-        <div class="row" ng-show="vm.visible">
+        <div class="row" ng-if="vm.visible">
             <div class="col-lg-12">
                 <div class="pull-rigth">
                     <button type="submit" class="btn btn-lg btn-primary" ng-click="vm.finalizarConsultaComando()">Finalizar consulta

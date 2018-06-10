@@ -1,4 +1,6 @@
 import {IFinalizarConsulta} from "./IFinalizarConsulta";
+import {IIngresarAntecedente} from "./model/IIngresarAntecedente";
+import {IPaciente} from "../tabla_antecedentes/model/IPaciente";
 
 export function RootConsultaDirective(): angular.IDirective {
     return {
@@ -17,6 +19,8 @@ export function RootConsultaController($scope, $uibModal, pacienteService, toast
     vm.visible = false;
     vm.cargando = false;
     vm.finalizarConsulta = <IFinalizarConsulta>{};
+    vm.paciente = <IPaciente>{};
+
     vm.consultarPacientePorId = function() {
         vm.cargando = true;
         var params = {
@@ -36,7 +40,6 @@ export function RootConsultaController($scope, $uibModal, pacienteService, toast
                     }else{
                         console.log('Consulta paciente: ', map);
                         vm.paciente = map;
-                        $scope.$broadcast("UPDATE_TABLA_ANTECEDENTES", vm.paciente.idPaciente);
                         vm.cargando = false;
                         vm.visible = true;
                     }
