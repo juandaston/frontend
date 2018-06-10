@@ -1,5 +1,4 @@
-import {IPaginacion} from "../../../core/models/IPaginacion";
-import {IIngresarAntecedente} from "../root_consulta/model/IIngresarAntecedente";
+import {IIngresarAntecedente} from "../tabla_antecedentes/model/IIngresarAntecedente";
 
 export function TablaAntedentesDirective(): angular.IDirective {
     return {
@@ -24,6 +23,7 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
     vm.listaAntecedentes = [];
 
     vm.ingresarAntecedente = <IIngresarAntecedente>{};
+    vm.editarAntecedenteCommand = <IIngresarAntecedente>{};
 
     $scope.$on('UPDATE_TABLA_ANTECEDENTES', function(event, data) {
         var params = {
@@ -97,6 +97,56 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
             }
         });
     };
+
+    vm.openEditarAntecedente = function(item) {
+        var modalInstance = $uibModal.open({
+            animation: 'true',
+            templateUrl: 'app/consulta/componentes/tabla_antecedentes/modales/editarAntecedenteModal.html',
+            controller: function($scope, $uibModalInstance, item) {
+                $scope.antecedenteEdit = item;
+
+                $scope.close = function() {
+                    $uibModalInstance.close();
+                };
+                $scope.aceptar = function() {
+                    vm.editarAntecedente($scope.antecedenteEdit);
+                    $uibModalInstance.close();
+                };
+            },
+            size: 'lg',
+            resolve: {
+                item: function() {
+                    return item;
+                }
+            }
+        });
+    }
+
+    vm.editarAntecedente = function(antecedenteEdit){
+
+        vm.editarAntecedenteCommand.comando = 'EditarAntecedente';
+        vm.editarAntecedenteCommand.idAntecedente = antecedenteEdit.idAntecedentes;
+        vm.editarAntecedenteCommand.idPaciente = vm.idpac;
+        vm.editarAntecedenteCommand.tipo = antecedenteEdit.tipo;
+        vm.editarAntecedenteCommand.descripcion = antecedenteEdit.descripcion;
+
+        console.log('Actualizar', vm.editarAntecedenteCommand);
+
+        antecedentesService.executeCommand(vm.editarAntecedenteCommand).then(function(response) {
+            switch (response.status) {
+                case 200:
+                    toastr.success("Se ha actualizado el antecedente exitosamente");
+                    break;
+                default:
+                    toastr.error("Ha ocurrido un error actualizando el antecedente");
+                    break;
+            }
+        }, function(reason) {
+            toastr.error("Ha ocurrido un error actualizando el antecedente");
+            console.log('error', reason);
+        });
+    };
+
 
     vm.pageChanged = function () {
         console.log("mi pagina es: ", vm.currentPage);

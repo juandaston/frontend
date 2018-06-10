@@ -1,4 +1,3 @@
-import {IPaginacion} from "../../../core/models/IPaginacion";
 import {IPaciente} from "../tabla_paciente/model/IPaciente";
 import {IEditarPacienteCommand} from "../tabla_paciente/model/IEditarPacienteCommand";
 
@@ -37,9 +36,8 @@ export function TablaPacienteController($scope, $uibModal, pacienteService, toas
             switch (response.status) {
                 case 200:
                     var map = response.data;
-                    var paginacion = <IPaginacion>map.paginacion;
-                    vm.totalItems = map.length - 1;
-                    vm.listaPacientes = map;
+                    vm.totalItems = map.totalRegistros;
+                    vm.listaPacientes = map.pacientes;
                     console.log("mi pagina es: ", map);
                     vm.cargando = false;
                     break;

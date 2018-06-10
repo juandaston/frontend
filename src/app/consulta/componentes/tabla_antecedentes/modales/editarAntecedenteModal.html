@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h3 class="modal-title">Agregar Antecedente</h3>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="cont">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="antecedenteEdit.tipo" class="control-label required">Tipo de Antecedente</label>
+                        <select class="form-control" ng-model="antecedenteEdit.tipo" id="antecedenteEdit.tipo" required advance-validations>
+                            <option value="Quirurgico">Quirurgico</option>
+                            <option value="Traumatico">Traumatico</option>
+                            <option value="Alergico">Alergico</option>
+                            <option value="Toxico">Toxico</option>
+                            <option value="Traumaticos">Traumaticos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label">Descripción</label>
+                        <textarea type="text" class="form-control" ng-model="antecedenteEdit.descripcion" name="antecedenteEdit.descripcion" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-secondary" type="button" ng-click="close()">Cancelar</button>
+    <button class="btn btn-primary" type="button" ng-click="aceptar()">Agregar</button>
+</div>

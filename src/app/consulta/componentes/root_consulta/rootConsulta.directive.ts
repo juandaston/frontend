@@ -1,6 +1,5 @@
 import {IFinalizarConsulta} from "./IFinalizarConsulta";
-import {IIngresarAntecedente} from "./model/IIngresarAntecedente";
-import {IPaciente} from "../tabla_antecedentes/model/IPaciente";
+import {IPaciente} from "../root_consulta/model/IPaciente";
 
 export function RootConsultaDirective(): angular.IDirective {
     return {

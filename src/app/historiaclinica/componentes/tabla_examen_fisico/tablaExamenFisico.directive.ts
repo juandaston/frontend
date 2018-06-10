@@ -1,4 +1,3 @@
-import {IPaginacion} from "../../../core/models/IPaginacion";
 
 export function TablaExamenFisioDirective(): angular.IDirective {
     return {
