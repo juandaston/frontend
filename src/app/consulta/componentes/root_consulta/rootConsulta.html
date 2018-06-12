@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="form-group">
-                    <label for="tipoIdentificacion" class="control-label required">Tipo Id</label>
+                    <label for="tipoIdentificacion" class="control-label required">Tipo Identificación</label>
                     <select class="form-control dropdown-toggle" ng-model="vm.datosPaciente.tipoIdentificacion" id="tipoIdentificacion" required advance-validations>
                         <option value="">Seleccione</option>
                         <option value="CC">Cedula</option>
@@ -70,7 +70,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label class="control-label">Enfermedad Actual</label>
-                        <input type="text" class="form-control" ng-model="vm.finalizarConsulta.enfermedadActual" name="enfermedadActual" />
+                        <textarea type="text" class="form-control" ng-model="vm.finalizarConsulta.enfermedadActual" name="enfermedadActual" />
                     </div>
                 </div>
 
@@ -210,8 +210,8 @@
 
         <div class="row" ng-if="vm.visible">
             <div class="col-lg-12">
-                <div class="pull-rigth">
-                    <button type="submit" class="btn btn-lg btn-primary" ng-click="vm.finalizarConsultaComando()">Finalizar consulta
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary" ng-click="vm.abrirModalConfirmacion()">Finalizar consulta
                     </button>
                 </div>
             </div>

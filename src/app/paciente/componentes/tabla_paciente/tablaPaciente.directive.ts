@@ -13,7 +13,7 @@ export function TablaPacienteDirective(): angular.IDirective {
 };
 
 /** @ngInject */
-export function TablaPacienteController($scope, $uibModal, pacienteService, toastr) {
+export function TablaPacienteController($scope, $uibModal, pacienteService, toastr, $state) {
     var vm = this;
     vm.totalItems = 0;
     vm.currentPage = 1;
@@ -25,7 +25,12 @@ export function TablaPacienteController($scope, $uibModal, pacienteService, toas
 
     vm.editarPacienteCommand = <IEditarPacienteCommand>{};
 
-    vm.updateTablaPacientes = function() {
+    $scope.$on('UPDATE_TABLA_PACIENTES_CHILD', function(event, data) {
+        console.log("Datos  +++++++++++++", data);
+        vm.cargarListaPacientes();
+    });
+
+    vm.cargarListaPacientes = function(){
         vm.cargando = true;
         var params = {
             'init': vm.itemsPerPage * (vm.currentPage - 1),
@@ -87,6 +92,8 @@ export function TablaPacienteController($scope, $uibModal, pacienteService, toas
             toastr.error("Ha ocurrido un error actualizando el paciente");
             console.log('error', reason);
         });
+
+        vm.cargarListaPacientes();
     };
 
     vm.pageChanged = function () {
@@ -120,8 +127,8 @@ export function TablaPacienteController($scope, $uibModal, pacienteService, toas
 
     $scope.$watch('vm.currentPage', function(newValue, oldValue) {
         if (newValue === oldValue) return;
-        vm.updateTablaPacientes();
+        vm.cargarListaPacientes();
     });
 
-    vm.updateTablaPacientes();
+    vm.cargarListaPacientes();
 }

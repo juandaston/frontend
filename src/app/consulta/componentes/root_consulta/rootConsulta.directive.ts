@@ -20,6 +20,25 @@ export function RootConsultaController($scope, $uibModal, pacienteService, toast
     vm.finalizarConsulta = <IFinalizarConsulta>{};
     vm.paciente = <IPaciente>{};
 
+    vm.abrirModalConfirmacion = function() {
+        var modalInstance = $uibModal.open({
+            animation: 'true',
+            templateUrl: 'app/consulta/componentes/root_consulta/modales/confirmacionFinalizar.html',
+            controller: function($scope, $uibModalInstance) {
+                $scope.close = function() {
+                    $uibModalInstance.close();
+                };
+                $scope.aceptar = function() {
+                    vm.finalizarConsultaComando();
+                    $uibModalInstance.close();
+                };
+            },
+            size: 'sm',
+            resolve: {
+            }
+        });
+    }
+
     vm.consultarPacientePorId = function() {
         vm.cargando = true;
         var params = {

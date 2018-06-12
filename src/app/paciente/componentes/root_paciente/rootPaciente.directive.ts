@@ -49,6 +49,7 @@ export function RootPacienteController($scope, $filter, $uibModal, toastr, pacie
                             switch (response.status) {
                                 case 200:
                                     toastr.success("Se ha ingresando el paciente correctamente");
+                                    $scope.$broadcast("UPDATE_TABLA_CASO_TUTELAS_CHILD", "");
                                     $uibModalInstance.close();
                                     break;
                                 default:
@@ -59,7 +60,6 @@ export function RootPacienteController($scope, $filter, $uibModal, toastr, pacie
                             toastr.error("Ha ocurrido un error ingresando el paciente");
                             console.log('error', reason);
                         });
-
                     };
                 },
                 size: 'lg',
@@ -72,6 +72,7 @@ export function RootPacienteController($scope, $filter, $uibModal, toastr, pacie
                     }
                 }
             });
+
         } else {
             $filter('mensaje')(vm.mensajes, {id: "faltanCampos"}, {visible: true});
         }

@@ -5,15 +5,23 @@
     <form>
         <div class="cont">
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-12">
                     <div class="form-group">
                         <label for="tipo" class="control-label required">Tipo de Antecedente</label>
                         <select class="form-control" ng-model="tipo" id="tipo" required advance-validations>
-                            <option value="Quirurgico">Quirurgico</option>
-                            <option value="Traumatico">Traumatico</option>
-                            <option value="Alergico">Alergico</option>
-                            <option value="Toxico">Toxico</option>
-                            <option value="Traumaticos">Traumaticos</option>
+                            <option value="">Seleccione</option>
+                            <option value="QUIRURGICO">QUIRURGICO</option>
+                            <option value="TRAUMATICO">TRAUMATICO</option>
+                            <option value="ALERGICO">ALERGICO</option>
+                            <option value="TOXICO">TOXICO</option>
+                            <option value="TRAUMATICOS">TRAUMATICOS</option>
+
+                            <option value="GINECOLOGICO_EMBARAZO">GINECOLOGICO_EMBARAZO</option>
+                            <option value="GINECOLOGICO_PARTO">GINECOLOGICO_PARTO</option>
+                            <option value="GINECOLOGICO_ABORTO">GINECOLOGICO_ABORTO</option>
+                            <option value="GINECOLOGICO_CESAREAS">GINECOLOGICO_CESAREAS</option>
+                            <option value="GINECOLOGICO_METODO_PLANIFICACION">GINECOLOGICO_METODO_PLANIFICACION</option>
+                            <option value="GINECOLOGICO_MENAREA">GINECOLOGICO_MENAREA</option>
                         </select>
                     </div>
                 </div>

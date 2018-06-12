@@ -12,7 +12,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="item in vm.listaAntecedentes">
-            <td>{{ item.fechaCreacion }}</td>
+            <td>{{ item.fechaCreacion | date:'dd/MM/yyyy'}}</td>
             <td>{{ item.tipo }}</td>
             <td>{{ item.descripcion }}</td>
             <td>

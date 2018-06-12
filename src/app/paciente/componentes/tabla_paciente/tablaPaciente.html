@@ -24,8 +24,8 @@
             <td>{{ item.fechaNacimiento | date:'dd/MM/yyyy' }}</td>
             <td>{{ item.tipoIdentificacion }}</td>
             <td>{{ item.numeroIdentificacion }}</td>
-            <td>{{ item.sexo == 'M' ? 'Masculino' : 'Femenino' }}</td>
-            <td>{{ item.estadoCivil == 'S' ? 'Soltero' : item.estadoCivil == 'C' ? 'Casado' : item.estadoCivil == 'U' ? 'Union Libre' : 'Otro'}}</td>
+            <td>{{ item.sexo == 'M' ? 'MASCULINO' : 'FEMENINO' }}</td>
+            <td>{{ item.estadoCivil == 'S' ? 'SOLTERO' : item.estadoCivil == 'C' ? 'CASADO' : item.estadoCivil == 'U' ? 'UNION LIBRE' : 'OTRO'}}</td>
             <td>{{ item.celular }}</td>
             <td>
                 <a href="" ng-click="vm.openEditarPaciente(item)">editar</a>
