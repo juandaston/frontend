@@ -1,5 +1,6 @@
 import {IPaciente} from "../tabla_paciente/model/IPaciente";
 import {IEditarPacienteCommand} from "../tabla_paciente/model/IEditarPacienteCommand";
+import {IIngresarPaciente} from "../root_paciente/IIngresarPaciente";
 
 export function TablaPacienteDirective(): angular.IDirective {
     return {
@@ -13,7 +14,7 @@ export function TablaPacienteDirective(): angular.IDirective {
 };
 
 /** @ngInject */
-export function TablaPacienteController($scope, $uibModal, pacienteService, toastr, $state) {
+export function TablaPacienteController($scope, $uibModal, pacienteService, toastr) {
     var vm = this;
     vm.totalItems = 0;
     vm.currentPage = 1;
@@ -25,7 +26,65 @@ export function TablaPacienteController($scope, $uibModal, pacienteService, toas
 
     vm.editarPacienteCommand = <IEditarPacienteCommand>{};
 
-    $scope.$on('UPDATE_TABLA_PACIENTES_CHILD', function(event, data) {
+    vm.ingresarPaciente = <IIngresarPaciente>{};
+
+    vm.openAgregarPacienteModal = function () {
+        var modalInstance = $uibModal.open({
+            animation: 'true',
+            templateUrl: 'app/paciente/componentes/root_paciente/modal/agregarPacienteModal.html',
+            controller: function ($scope, $uibModalInstance, info) {
+                $scope.close = function() {
+                    $uibModalInstance.close();
+                };
+                $scope.aceptar = function() {
+                    vm.ingresarPaciente.comando = 'IngresarPaciente';
+                    vm.ingresarPaciente.tipoIdentificacion = $scope.tipoIdentificacion
+                    vm.ingresarPaciente.numeroIdentificacion = $scope.numeroIdentificacion
+                    vm.ingresarPaciente.primerNombre = $scope.primerNombre
+                    vm.ingresarPaciente.segundoNombre = $scope.segundoNombre
+                    vm.ingresarPaciente.primerApellido = $scope.primerApellido
+                    vm.ingresarPaciente.segundoApellido = $scope.segundoApellido
+                    vm.ingresarPaciente.celular = $scope.celular
+                    vm.ingresarPaciente.telefono = $scope.telefono
+                    vm.ingresarPaciente.direccion = $scope.direccion
+                    vm.ingresarPaciente.fechaNacimiento = $scope.fechaNacimiento
+                    vm.ingresarPaciente.profesion = $scope.profesion
+                    vm.ingresarPaciente.observaciones = $scope.observaciones
+                    vm.ingresarPaciente.sexo = $scope.genero
+                    vm.ingresarPaciente.estadoCivil = $scope.estadoCivil
+
+                    console.log(vm.ingresarPaciente)
+
+                    pacienteService.executeCommand(vm.ingresarPaciente).then(function(response) {
+                        switch (response.status) {
+                            case 200:
+                                toastr.success("Se ha ingresando el paciente correctamente");
+                                $uibModalInstance.close();
+                                vm.cargarListaPacientes();
+                                break;
+                            default:
+                                toastr.error("Ha ocurrido un error ingresando el paciente");
+                                break;
+                        }
+                    }, function(reason) {
+                        toastr.error("Ha ocurrido un error ingresando el paciente");
+                        console.log('error', reason);
+                    });
+                };
+            },
+            size: 'lg',
+            resolve: {
+                info: function () {
+                    return vm.model;
+                },
+                vm: function () {
+                    return vm;
+                }
+            }
+        });
+    };
+
+    $scope.$on('UPDATE_TABLA_PACIENTE_CHILD', function(event, data) {
         console.log("Datos  +++++++++++++", data);
         vm.cargarListaPacientes();
     });

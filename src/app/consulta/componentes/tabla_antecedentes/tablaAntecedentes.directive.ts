@@ -26,10 +26,17 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
     vm.editarAntecedenteCommand = <IIngresarAntecedente>{};
 
     $scope.$on('UPDATE_TABLA_ANTECEDENTES', function(event, data) {
+        vm.consultarAntecedentesPorIdPaciente(data);
+    });
+
+
+    vm.consultarAntecedentesPorIdPaciente = function(data) {
         var params = {
             'idPaciente': data,
             'init': vm.itemsPerPage * (vm.currentPage - 1),
             'limit': vm.itemsPerPage}
+
+        console.log('Paciente ID: ', data);
 
         antecedentesService.getAntecedentesPorIdPaciente(params).then(function(response) {
             switch (response.status) {
@@ -51,7 +58,7 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
         }, function(reason) {
             toastr.error("Ocurrió un error obteniendo los antedecedntes");
         });
-    });
+    }
 
     vm.openAgregarAntecedenteModal = function () {
         var modalInstance = $uibModal.open({
@@ -74,6 +81,7 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
                             case 200:
                                 toastr.success("Se ha ingresando el paciente correctamente");
                                 $uibModalInstance.close();
+                                vm.consultarAntecedentesPorIdPaciente(vm.idpac);
                                 break;
                             default:
                                 toastr.error("Ha ocurrido un error ingresando el antecedente");
@@ -84,7 +92,7 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
                         console.log('error', reason);
                     });
                 };
-                $scope.$broadcast("UPDATE_TABLA_ANTECEDENTES", vm.idpac);
+                vm.consultarAntecedentesPorIdPaciente(vm.idpac);
             },
             size: 'md',
             resolve: {
@@ -136,6 +144,7 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
             switch (response.status) {
                 case 200:
                     toastr.success("Se ha actualizado el antecedente exitosamente");
+                    vm.consultarAntecedentesPorIdPaciente(vm.idpac);
                     break;
                 default:
                     toastr.error("Ha ocurrido un error actualizando el antecedente");
@@ -145,6 +154,8 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
             toastr.error("Ha ocurrido un error actualizando el antecedente");
             console.log('error', reason);
         });
+
+        vm.consultarAntecedentesPorIdPaciente(vm.idpac);
     };
 
 
@@ -156,8 +167,8 @@ export function TablaAntedentesController($scope, $uibModal, toastr, antecedente
     //paginacion
     $scope.$watch('vm.currentPage', function (newValue, oldValue) {
         if (newValue === oldValue) return;
-        $scope.$broadcast("UPDATE_TABLA_ANTECEDENTES", vm.idpac);
+        vm.consultarAntecedentesPorIdPaciente(vm.idpac);
     });
 
-    $scope.$broadcast("UPDATE_TABLA_ANTECEDENTES", vm.idpac);
+    vm.consultarAntecedentesPorIdPaciente(vm.idpac);
 }

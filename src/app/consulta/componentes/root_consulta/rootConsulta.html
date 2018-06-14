@@ -18,14 +18,16 @@
                     <input type="text" class="form-control" ng-model="vm.datosPaciente.numeroIdentificacion" name="numeroIdentificacion" />
                 </div>
             </div>
-            <div class="col-sm-1">
+            <div class="col-sm-2">
                 <div class="form-group">
-                    <br>
+                    <label class="control-label">Presione para paciente:</label>
                     <button type="submit" class="btn btn-lg btn-primary" ng-click="vm.consultarPacientePorId()">Consultar Paciente
                     </button>
                 </div>
             </div>
         </div>
+
+        <br>
 
         <div class="panel panel-default" ng-if="vm.visible">
             <div class="panel-heading">Datos paciente</div>
@@ -204,7 +206,7 @@
         <div ng-if="vm.visible" class="panel panel-default">
             <div class="panel-heading">Antecedentes</div>
             <div class="panel-body">
-                <tabla-antecedentes idpac="1"></tabla-antecedentes>
+                <tabla-antecedentes idpac={{vm.paciente.idPaciente}}></tabla-antecedentes>
             </div>
         </div>
 
